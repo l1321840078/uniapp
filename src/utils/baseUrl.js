@@ -18,7 +18,8 @@ switch (envVersion) {
 }
 // #endif
 // #ifdef H5
-url = 'https://www.fjchebaobao.com:8443'
+// url = '/api'
+url = 'https://o2ov2.lemobar.cn'
 // #endif
 console.log(url, 'url');
 
@@ -26,5 +27,4 @@ const baseUrl = {
   url: url,//正式
   imgUrl: `https://www.fjchebaobao.com:7443`
 }
-
 module.exports = baseUrl

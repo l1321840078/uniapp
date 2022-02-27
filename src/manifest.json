@@ -54,16 +54,32 @@
 		"usingComponents": true
 	},
 	"h5": {
-		"router": {
-			"base": "/wxcar"
-		},
-		"sdkConfigs": {
-			"maps": {
-				"qqmap": {
-					"key": "W7YBZ-ORU62-3EYUG-CLKF3-B6RGO-25FL4"
+		"devServer": {
+			"https": false,
+			"port": 80,
+			"disableHostCheck": true, // 开启可以用自己的域名
+			"proxy": {
+				"/api": {
+					// "target" : "http://192.168.1.8:8000", //请求的目标域名
+					"target": "http://o2ov2.lemobar.cn", //请求的目标域名
+					"changeOrigin": true,
+					"secure": false,
+					"pathRewrite": {
+						//使用代理； 告诉他你这个连接要用代理
+						"^/api": "/"
+					}
 				}
 			}
-		}
+		},
+		"router": {
+			"mode": "hash",
+			"base": "./"
+		},
+		"title": "乐摩吧",
+		"sdkConfigs": {
+			"maps": {}
+		},
+		"template": ""
 	},
 	"mp-alipay": {
 		"usingComponents": true
