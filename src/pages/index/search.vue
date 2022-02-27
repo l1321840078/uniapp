@@ -3,9 +3,7 @@
     <view class="cu-bar search">
       <view class="search-form round">
         <text class="cuIcon-search" />
-        <!-- <form class="form" action="#"> -->
         <input placeholder="输入关键字搜索" v-model="keywords" :focus="focus" confirm-type="search" @confirm="getList" />
-        <!-- </form> -->
       </view>
     </view>
     <!-- #ifdef H5 -->

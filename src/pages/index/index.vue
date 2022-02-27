@@ -1,14 +1,6 @@
 <template>
   <view>
-    <!-- #ifdef H5 -->
-    <!-- <view class="cu-bar search bg-gradual-blue">
-      <view class="search-form round">
-        <text class="cuIcon-search" />
-        <input placeholder="法拉利" disabled @click="searchTap" />
-      </view>
-    </view> -->
 
-    <!-- #endif -->
     <view class="navBar fixed" :style="{height: customBar+'px',background:barBackground}">
       <view class="cu-bar search">
         <view class="search-form round" @tap="searchTap">
@@ -24,9 +16,7 @@
       <scroll-view scroll-y class="scroll-view" @scroll="bindScroll">
         <!-- #endif -->
         <banner :list="bannerList" :top="customBar+10+'px'"></banner>
-        <!-- #ifdef H5 -->
-        <!-- <banner :list="bannerList" top="20px"></banner> -->
-        <!-- #endif -->
+
         <view class="grid-box margin-between-20 border-radius-16">
           <gridList :list_data='gridMenuData' @listTap='gridMenuTap' />
         </view>

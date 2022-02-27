@@ -15,6 +15,9 @@ yarn add sass-loader@7.1.0 node-sass@4 --dev -----sass-loader 版本不宜太高
 
 https://zhuanlan.zhihu.com/p/414028184
 
+若报错：failed unable to access ‘***.git/‘:OpenSSL SSL_read: Connection was reset, errno 10054
+则在终端输入命令行：git config --global http.sslBackend "openssl"即可
+
 ## Project setup
 
 ```
